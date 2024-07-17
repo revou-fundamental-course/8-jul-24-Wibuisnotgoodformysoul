@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Kalkulator BMI</h1>
+    <p>
+      BMI (Body Mass Index) adalah ukuran yang digunakan untuk
+      menentukan apakah berat badan Anda sehat sesuai dengan tinggi
+      badan Anda. Gunakan kalkulator BMI kami untuk mengetahui
+      indeks massa tubuh Anda.
+    </p>
+    
+    <h3>Fitur unggulan</h3>
+    <li>
+      Menghitung indeks massa tubuh.
+    </li>
+    <li>
+      Menentukan apakah berat badan Anda termasuk dalam kategori
+      ideal atau tidak.
+    </li>
+    <li>
+      Menyediakan rencana untuk program penurunan berat badan.
+    </li>
+    
+    <p>
+      Kalkulator ini dirancang khusus untuk digunakan oleh orang
+      dewasa. Wanita hamil atau menyusui tidak dianjurkan
+      menggunakan kalkulator ini untuk menilai BMI mereka.
+      Disarankan untuk tidak mengambil tindakan berdasarkan hasil
+      ini tanpa berkonsultasi dengan tenaga medis profesional
+      seperti dokter.
+    </p>
+    
+    <p>
+      Kalkulator ini memberikan gambaran umum tentang bagaimana
+      berat badan Anda dibandingkan dengan standar yang berlaku.
+      Indeks Massa Tubuh (IMT) dihitung dengan membagi berat
+      badan Anda (dalam kilogram) dengan tinggi badan Anda (dalam
+      meter) yang dikuadratkan, atau IMT = Kg/M
+    </p>
+    
+    
+  
+    <div class="box">
+      <form id="bmiForm">
+        <p>
+           Masukkan tinggi, berat badan, dan usia Anda pada kolom
+           yang
+           tersedia di bawah ini, lalu klik tombol "Hitung BMI"
+           untuk
+           mendapatkan hasilnya.
+        </p>
+       
+        
+        <div class="input-group">
+          <input type="number" id="age" name="age" oninput="validateInput(this)" maxlength="3" required>
+          <label for="age">Usia</label>
+        </div>
+        
+       
+        <div class="input-group">
+          <input type="number" id="weight" name="weight" oninput="validateInput(this)" maxlength="3" required>
+          <label for="weight">Berat Badan (kg)</label>
+        </div>
+        
+        
+        <div class="input-group">
+          <input type="number" id="height" name="height" oninput="validateInput(this)" maxlength="3" required>
+          <label for="height">Tinggi Badan (cm)</label>
+        </div>
+        
+        
+        <div class="input-gen">
+          <legend >Jenis Kelamin</legend>
+          <input type="radio" id="male" name="gender" value="male"
+          required>
+          <label for="male" class="gen">Laki-Laki</label>
+          <input type="radio" id="female" name="gender" value
+          ="female">
+          <label for="female" class="gen">Wanita</label>
+          <br>
+        </div>
+          
+        
+          <button type="submit">Hitung BMI</button>
+          <button type="reset">Reset</button>
+          
+      </form>
+    </div>
+
+    
+    <div id="result" class="hidden">
+      <h2>Hasil BMI</h2>
+      <h1 id="bmiValue"></h1>
+      <h4 id="bmiCategory"></h4>
+      <h4 id="bmiGender"></h4>
+      <p id="bmiAdvice"></p>
+      <p id="bmiProgram"></p>
+      <p id="additionalText"></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

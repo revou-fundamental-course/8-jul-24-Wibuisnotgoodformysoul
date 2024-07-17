@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+  margin: 8px;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  color: #262626;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #FFF8F3;
+}
+
+.box {
+  background-color: #F7E7DC;
+  border-radius: 6px;
+}
+
+/* input */
+.input-group {
+  position: relative;
+  margin: 13px 0;
+}
+
+.input-group label {
+  position: absolute;
+  top: 36%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #272727;
+  padding: 0.5px;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input-group input {
+  width: 320px;
+  height: 40px;
+  font-size: 14px;
+  color: #323335;
+  padding: 9px;
+  background: transparent;
+  border: 3px solid #758694;
+  outline: none;
+  border-radius: 5px;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+  top: 0;
+  font-size: 15px;
+  background: #F7E7DC;
+}
+
+
+/* Radio/gender */
+.input-gen {
+  margin-left: 0;
+}
+
+legend {
+  margin-bottom: 0;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label.gen {
+  position: relative;
+  color: #758694;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 3px solid #758694;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+label.gen:before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  border: 3px solid #758694;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label.gen:before {
+  height: 7px;
+  width: 7px;
+  border: 5.6px solid #F7E7DC;
+  background-color: #758694;
+}
+
+input[type="radio"]:checked + label.gen {
+  background-color: #758694;
+  color: #F7E7DC;
+}
+
+/* button */
+
+button[type=submit] {
+  font-size: 18px;
+  background-color: #405D72;
+  border: solid #3A5468;
+  color: #F7E7DC;
+  padding: 6px 24px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button[type=reset] {
+  font-size: 18px;
+  background-color: #405D72;
+  border: solid #3A5468;
+  color: #F7E7DC;
+  padding: 6px 24px;
+  text-decoration: none;
+  margin: 3px 7px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Hasil */
+
+#result {
+  padding: 6px;
+  background-color: #F7E7DC;
+  border-radius: 6px;
+  hidden: none;
+}
+
+#bmiValue{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#bmiCategory{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
